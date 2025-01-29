@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon details</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/characterdetails.css"> 
+
+    <!-- Font Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="main-section">
+        <section class="details">
+            <div class="icons">
+                <button id="back-button" onclick="window.location.href= 'index.html'">
+                    <svg height="32px" version="1.1" viewBox="0 0 32 32" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Guides"/><g id="Mail"/><g id="Cloud"/><g id="Home"/><g id="Back"><path d="M25.002,16c0,0.5522-0.4473,1-1,1H9.8672l4.9629,7.4453c0.3066,0.4595,0.1826,1.0806-0.2773,1.3867   C14.3818,25.9458,14.1895,26,13.999,26c-0.3232,0-0.6406-0.1563-0.833-0.4453L6.7959,16l6.3701-9.5547   c0.3057-0.46,0.9248-0.5845,1.3867-0.2773c0.46,0.3062,0.584,0.9272,0.2773,1.3867L9.8672,15H24.002   C24.5547,15,25.002,15.4478,25.002,16z"/></g><g id="Next"/><g id="Reload"/><g id="Buble"/><g id="Accept"/><g id="Reject"/><g id="User"/><g id="Download"/><g id="Upload"/><g id="Camera"/><g id="Notification"/><g id="About"/><g id="Search"/><g id="Cart"/><g id="Sound"/><g id="List"/><g id="Settings"/></svg>
+                </button>
+                <button class="lovebutton" onclick="changeColor(this)">
+                    <svg height="32px" version="1.1" viewBox="0 0 32 32" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -1028.4)"><path d="m7 1031.4c-1.5355 0-3.0784 0.5-4.25 1.7-2.3431 2.4-2.2788 6.1 0 8.5l9.25 9.8 9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-0.75 0.8-0.75-0.8c-1.172-1.2-2.7145-1.7-4.25-1.7z"/></g></svg>
+                </button>
+            </div>    
+            <div class="character-main">
+                <h1 id="pokemon-name"></h1>
+                <span id="pokemon-number"></span>
+            </div>
+            <div class="powers">
+                <ol id="pokemon-powers">
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        </section>
+        <div class="character-img">
+            <img id="pokemon-photo" alt="Pokemon">
+        </div>
+        <section class="about-character">
+                <!-- Tabs  -->
+                <div class="tabs">
+                    <button class="tab-button active about" data-tab="About">About</button>
+                </div> 
+                <!-- Tabs content -->
+                <div class="tab-content" id="about-content">
+                    <span class="title">Species</span><span id="pokemon-species"></span>
+                    <span class="title">Height</span><span id="pokemon-height"></span>
+                    <span class="title">Weight</span><span id="pokemon-weight"></span>
+                    <span class="title">Abilities</span><span id="pokemon-abilities"></span>
+                    <span id="breeding">Breeding</span>
+                    <span class="title">Egg Groups</span><span id="pokemon-egg-groups"></span>
+                </div>
+        </section>
+    </section>
+
+    <!-- JavaScript files -->
+    <script src="./assets/js/details.js"></script> 
+    <script src="./assets/js/pokemon-model.js"></script>
+    <script src="./assets/js/poke-api.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
